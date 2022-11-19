@@ -21,9 +21,6 @@ export default {
                 return /^mdi-/.test(value);
             }
         }
-    },
-    mounted() {
-        this.$emit('onOffsetWidth', this.$refs.item.offsetWidth);
     }
 };
 </script>

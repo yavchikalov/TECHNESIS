@@ -85,9 +85,6 @@ export default {
         });
     },
     methods: {
-        handleOffsetWidth(value, key) {
-            this.tags[key] = value;
-        },
         handleResize() {
             this.offsetWidthContent = this.$refs?.content?.offsetWidth || 0;
         }
