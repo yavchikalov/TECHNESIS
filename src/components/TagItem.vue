@@ -1,10 +1,12 @@
-<template lang="pug">
-    .tag-item(
-        ref="item"
-    )
-        .tag-item__icon
-            v-icon {{ icon }}
-        .tag-item__text {{ text }}
+<template>
+    <div class="tag-item">
+        <v-icon>
+            {{ icon }}
+        </v-icon>
+        <div class="tag-item__text">
+            {{ text }}
+        </div>
+    </div>
 </template>
 
 <script>

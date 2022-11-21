@@ -1,24 +1,20 @@
-<template lang="pug">
-    v-app.app
-        v-main.app__main.ma-10
-            .my-10
-                TagList(
-                    :list="tagList"
-                )
-            .my-10
-                TagList(
-                    :list="tagList"
-                    align="full"
-                )
-            .app__half.my-10
-                TagList(
-                    :list="tagList"
-                )
-            .app__half.my-10
-                TagList(
-                    :list="tagList"
-                    align="full"
-                )
+<template>
+    <v-app class="app">
+        <v-main class="app__main ma-10">
+            <div class="my-10">
+                <TagList :list="tagList" />
+            </div>
+            <div class="my-10">
+                <TagList :list="tagList" align="full" />
+            </div>
+            <div class="app__half my-10">
+                <TagList :list="tagList" />
+            </div>
+            <div class="app__half my-10">
+                <TagList :list="tagList" align="full" />
+            </div>
+        </v-main>
+    </v-app>
 </template>
 
 <script>

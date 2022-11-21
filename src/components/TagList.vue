@@ -1,23 +1,16 @@
-<template lang="pug">
-    .tag-list(
-        ref="content"
-        :class="`tag-list--${align}`"
-    )
-        template(
-            v-for="(tag, key) in visibleList"
-        )
-            .tag-list__item(
-                ref="items"
-                :key="key"
-            )
-                TagItem(
-                    v-bind="tag"
-                )
-            .tag-list__separator(
-                ref="separator"
-                :key="`separator-${key}`"
-            )
-                v-icon mdi-circle-small
+<template>
+    <div ref="content" :class="`tag-list tag-list--${align}`">
+        <template v-for="(tag, key) in visibleList">
+            <div ref="items" :key="key" class="tag-list__item">
+                <TagItem v-bind="tag" />
+            </div>
+            <div ref="separator" :key="`separator-${key}`" class="tag-list__separator">
+                <v-icon>
+                    mdi-circle-small
+                </v-icon>
+            </div>
+        </template>
+    </div>
 </template>
 
 <script>
